@@ -44,6 +44,7 @@ public class Ball implements Runnable {
         } finally {
             phaser.arriveAndDeregister();
         }
+        world.repaint();
     }
 
     private final static Phaser phaser = new Phaser() {
@@ -80,5 +81,9 @@ public class Ball implements Runnable {
             g.setColor(col);
             g.fillOval(xpos, ypos, BALLW, BALLH);
         }
+    }
+
+    public void removeSelf() {
+        world.removeBall(this);
     }
 }

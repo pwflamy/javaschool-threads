@@ -51,7 +51,6 @@ public class Solution {
         Thread.currentThread().setName("MyMainThread");
 
 
-        //List<FutureTask<Ball>> futures = new ArrayList<>();
         Map<Ball, Future<?>> futures = new HashMap<>();
         ExecutorService service = Executors.newFixedThreadPool(5);
 

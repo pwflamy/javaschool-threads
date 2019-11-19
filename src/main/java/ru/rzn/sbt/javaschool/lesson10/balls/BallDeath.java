@@ -25,7 +25,7 @@ public class BallDeath implements Runnable {
             if (!future.isDone()) {
                 future.cancel(true);
             }
-            nextBall.world.removeBall(nextBall);
+            nextBall.removeSelf();
             try {
                 Thread.sleep(1000 + random.nextInt(4000));
             } catch (InterruptedException e) {
